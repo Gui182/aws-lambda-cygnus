@@ -27,10 +27,8 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4
       with:
-    # Artifact name
         name: estelar_artifact
-    # A file, directory or wildcard pattern that describes what to upload
-        path: ./target
+
 
   deploy-lambda:
     needs: build

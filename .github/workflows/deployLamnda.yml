@@ -23,17 +23,18 @@ jobs:
         run: mvn -f estelar/pom.xml clean package
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: lambda-package
           path: ./target
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: lambda-package
 

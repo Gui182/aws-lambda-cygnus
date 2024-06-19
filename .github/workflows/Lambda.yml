@@ -23,4 +23,4 @@ jobs:
 
       - name: Deploy to AWS Lambda
         run: |
-          aws lambda update-function-code --function-name homolog-poc --zip-file fileb://target/estelar-1.0.jar
+          aws lambda update-function-code --function-name homolog-poc --zip-file fileb://estelar-1.0.jar

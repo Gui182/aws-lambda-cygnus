@@ -41,7 +41,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml -P without-db-tests
+      run: mvn -f estelar/pom.xml clean package
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4

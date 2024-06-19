@@ -26,8 +26,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: lambda-package
-          path: target/cygnus.jar
-
+          path: ./target
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -54,4 +53,4 @@ jobs:
 
       - name: Deploy to AWS Lambda
         run: |
-          aws lambda update-function-code --function-name homolog-poc --zip-file fileb://target/cygnus.jar
+          aws lambda update-function-code --function-name homolog-poc --zip-file fileb://target/estelar-1.0.jar

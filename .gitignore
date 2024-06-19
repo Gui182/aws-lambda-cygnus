@@ -1,0 +1,7 @@
+# Maven
+log/
+target/
+conf.xml
+
+# vscode
+.vscode/
